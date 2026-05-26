@@ -2,17 +2,13 @@
 version: "3"
 services:
  devopsdb:
-   image: arunb999/automation:db
+   image: arunb999/automate:db
    ports:
      - "3306:3306"
-   deploy:
-     replicas: 3
-
+  
  application:
-   image: arunb999/automation:app
+   image: arunb999/automate:app
    ports:
      - "1111:8080"
-   deploy:
-     replicas: 3
    depends_on:
      - "devopsdb"
