@@ -2,12 +2,12 @@
 version: "3"
 services:
  devopsdb:
-   image: arunb999/automate:db
+   image: arunb999/auto:db
    ports:
      - "3306:3306"
   
  application:
-   image: arunb999/automate:app
+   image: arunb999/auto:app
    ports:
      - "1111:8080"
    depends_on:
